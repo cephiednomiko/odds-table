@@ -1,0 +1,76 @@
+.bookmaker {
+    min-width: 104px;
+    margin: 0 4px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 576px) {
+        min-width: 54px;
+    }
+    &__img {
+        max-width: 100%;
+        height: 32px;
+        display: block;
+        border-radius: 5px;
+        background-image: url('/images/sprite.jpg');
+        &--DraftkingSportsbook {
+            background-position: 0px -4px;
+        }
+        &--FanduelSportsbook {
+            background-position: -112px -4px;
+        }
+        &--PointsBet {
+            background-position: -224px -4px;
+        }
+        &--Betrivers {
+            background-position: -336px -4px;
+        }
+        &--SugarHouse {
+            background-position: -448px -4px;
+        }
+        @media (max-width: 576px) {
+            background-size: 536%;
+            height: 16px;
+            &--FanduelSportsbook {
+                background-position: -59px -4px;
+            }
+            &--PointsBet {
+                background-position: -116px -4px;
+            }
+            &--Betrivers {
+                background-position: -176px -4px;
+            }
+            &--SugarHouse {
+                background-position: -236px -4px;
+            }
+        }
+    }
+    &__result {
+        padding: 10px;
+        border: 1px solid $light-gray;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &-value {
+            color: $gray;
+            &:first-child {
+                color: $black;
+                font-weight: 700;
+                margin-right: $gutter;
+                @media (max-width: 576px) {
+                    margin-right: 0;
+                    display: block;
+                    text-align: right;
+                }
+            }
+        }
+        &--best-top {
+            border-top: 2px solid $yellow;
+        }
+        &--best-bottom {
+            border-bottom: 2px solid $yellow;
+        }
+    }
+}

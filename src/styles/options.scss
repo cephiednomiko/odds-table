@@ -1,0 +1,50 @@
+.options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    select {
+        width: 210px;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1px solid $light-gray;
+        background: none;
+        @media (max-width: 576px) {
+            width: 100%;
+            padding: 10px 0;
+        }
+    }
+    .arrows {
+        margin-left: $gutter;
+        button {
+            background: transparent;
+            border-radius: 50%;
+            border: 2px solid $gray;
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            text-align: center;
+            padding: 6px 0;
+            outline: none;
+            cursor: pointer;
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+            &:hover {
+                background: $black;
+                svg {
+                    fill: #fff
+                }
+            }
+            &:disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+            &:focus {
+                border: 2px solid $black;
+            }
+        }
+    }
+}

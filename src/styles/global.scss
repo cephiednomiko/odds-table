@@ -1,0 +1,32 @@
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: $black;
+    font-size: 16px;
+    @media (max-width: 576px) {
+        font-size: 12px;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .mobile-hidden {
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    .desktop-hidden {
+        @media (min-width: 577px) {
+            display: none;
+        }
+    }
+    .container {
+        max-width: 966px;
+        padding: $gutter;
+        margin: 0 auto;
+    }
+    h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+}

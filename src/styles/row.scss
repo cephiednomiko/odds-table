@@ -1,0 +1,84 @@
+.row {
+    display: flex;
+    margin-bottom: $gutter * 3;
+    &__header {
+        height: 47px;
+        padding-bottom: $gutter;
+    }
+    &__first-column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__date {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $gray;
+        display: inline-block;
+        padding-top: 16px;
+        @media (max-width: 576px) {
+            padding-top: 7px;
+        }
+    }
+    &__teams {
+        width: 225px;
+        min-height: 100px;
+        height: 100%;
+        padding: 10px $gutter;
+        border: 1px solid $light-gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media (max-width: 576px) {
+            width: 50px;
+            padding: 10px $gutter/2;
+        }
+        > * {
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+    &__second-column {
+        flex: 0 0 120px;
+        text-align: center;
+        padding-top: 7px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 576px) {
+            flex: 0 0 80px;
+            padding-top: 0;
+        }
+    }
+    &__consensus {
+        padding: 10px $gutter;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    &__third-column {
+        display: flex;
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+        @media (max-width: 576px) {
+            overflow-x: auto;
+        }
+    }
+    &__scroll {
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transition: left .3s ease-out;
+        @media (max-width: 576px) {
+            position: relative;
+            left: 0 !important;
+            transition: none;
+        }
+    }
+}
