@@ -9,7 +9,11 @@
         font-weight: 700;
         text-transform: uppercase;
         border: 1px solid $light-gray;
-        background: none;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5AoNFAcCQ7vPDwAAALRJREFUKM/VkjEOgzAQBJf8w6+gslz6E4gn8QJ/yh0NLijAQuASyXK5aSIExFAkTbLSNXs3e1dcQZL4UA98oR+BY4yIMWYHU0pY1/Vo8qVpmiilpFKK4zhyr2VZqLVmWZbs+37zt81d18F7j2EYUFUVvPcAgBAC6rqGcw4hBLRt+76ZJI0xFEJQCEGlFK211FpvXtM0h4sO8DlgX2cwC+cCcuAlvA+4Am9hkpzn+a7N4j9/+wlKOFS7U5F1KQAAAABJRU5ErkJggg==') no-repeat;
+        background-position: right 10px center;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
         @include breakpoint('tablet'){
             width: 100%;
             padding: 10px 0;
@@ -19,10 +23,10 @@
         margin-left: $gutter;
         button {
             background: transparent;
-            border-radius: 50%;
-            border: 2px solid $gray;
-            width: 30px;
-            height: 30px;
+            border-radius: 50px;
+            border: 2px solid #6c757d;
+            width: 32px;
+            height: 32px;
             margin-left: 5px;
             text-align: center;
             padding: 6px 0;
