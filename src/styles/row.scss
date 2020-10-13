@@ -10,7 +10,6 @@
         flex-direction: column;
     }
     &__date {
-        font-size: 12px;
         text-transform: uppercase;
         color: $gray;
         display: inline-block;
@@ -34,7 +33,6 @@
         }
         > * {
             font-weight: 700;
-            font-size: 18px;
             text-transform: uppercase;
             text-decoration: none;
         }

@@ -2,10 +2,10 @@
     <div class="row">
         <div class="row__first-column">
             <div class="row__header">
-                <span class="row__date"><span class="mobile-hidden">THU OCT 01 </span>8:20 PM</span>
+                <span class="row__date row__date--font-small"><span class="mobile-hidden">THU OCT 01 </span>8:20 PM</span>
             </div>
             <div v-if="(type === 'spread') || (type === 'moneyline')"
-                 class="row__teams">
+                 class="row__teams row__teams--font-large">
                 <span v-for="team in odds.teams"
                       :key="`team-${team.id}`"
                       class="mobile-hidden"
