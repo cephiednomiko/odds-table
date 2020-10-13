@@ -36,7 +36,9 @@
             <div ref="row"
                  class="row__scroll"
                  :style="`left:${rowScroll}px`"
-                 @wheel.prevent="scrollMouse">
+                 @wheel.prevent="scrollMouse"
+                 @mouseenter="stopBodyScroll('add')"
+                 @mouseleave="stopBodyScroll('remove')">
                 <bookmaker v-for="(maker, index) in odds.bookmakers"
                            :key="index"
                            :maker="maker"
@@ -68,7 +70,13 @@
         },
         methods:{
             scrollMouse(e){
-                e.wheelDelta > 0 ? store.commit('scroll', 'left') : store.commit('scroll', 'right')
+                e.deltaY > 0 ? store.commit('scroll', 'left') : store.commit('scroll', 'right')
+            },
+            disableDefault(e){
+                e.preventDefault();
+            },
+            stopBodyScroll(method){
+                document[method + 'EventListener']("MozMousePixelScroll", this.disableDefault );
             }
         }
 
