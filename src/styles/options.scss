@@ -10,7 +10,7 @@
         text-transform: uppercase;
         border: 1px solid $light-gray;
         background: none;
-        @media (max-width: 576px) {
+        @include breakpoint('tablet'){
             width: 100%;
             padding: 10px 0;
         }

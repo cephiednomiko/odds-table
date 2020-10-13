@@ -2,20 +2,21 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
     color: $black;
     font-size: 16px;
-    @media (max-width: 576px) {
+    @include breakpoint('mobile'){
         font-size: 12px;
     }
     * {
         box-sizing: border-box;
     }
     .mobile-hidden {
-        @media (max-width: 576px) {
+        @include breakpoint('mobile'){
             display: none;
         }
     }
     .desktop-hidden {
-        @media (min-width: 577px) {
-            display: none;
+        display: none;
+        @include breakpoint('mobile'){
+            display: block;
         }
     }
     .container {

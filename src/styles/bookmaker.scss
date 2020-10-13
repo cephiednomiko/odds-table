@@ -3,7 +3,7 @@
     margin: 0 4px;
     display: flex;
     flex-direction: column;
-    @media (max-width: 576px) {
+    @include breakpoint('mobile'){
         min-width: 54px;
     }
     &__img {
@@ -27,7 +27,7 @@
         &--SugarHouse {
             background-position: -448px -4px;
         }
-        @media (max-width: 576px) {
+        @include breakpoint('mobile'){
             background-size: 536%;
             height: 16px;
             &--FanduelSportsbook {
@@ -59,7 +59,7 @@
                 color: $black;
                 font-weight: 700;
                 margin-right: $gutter;
-                @media (max-width: 576px) {
+                @include breakpoint('mobile'){
                     margin-right: 0;
                     display: block;
                     text-align: right;
