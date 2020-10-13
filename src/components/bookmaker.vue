@@ -4,7 +4,7 @@
             <span :class="`bookmaker__img bookmaker__img--${maker.name}`"/>
         </div>
         <div class="bookmaker__result"
-             :class="{'bookmaker__result--best-top': maker.results[type][0][0] === bestTop, 'bookmaker__result--best-bottom': maker.results[type][1][0] === bestBottom }">
+             :class="{'bookmaker__result--best-top': Number(maker.results[type][0][0]) === bestTop, 'bookmaker__result--best-bottom': Number(maker.results[type][1][0]) === bestBottom }">
             <span v-for="(res, index) in maker.results[type]"
                   :key="`res-${index}`">
                 <span v-for="(r, i) in res"

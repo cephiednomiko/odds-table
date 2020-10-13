@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 function randomizer(startVal, valRange, decimal) {
-    return Number((Math.random() * valRange + startVal).toFixed(decimal ? decimal : 0));
+    return (Math.random() * valRange + startVal).toFixed(decimal ? decimal : 0);
 }
 
 export default new Vuex.Store({
