@@ -33,7 +33,10 @@
             </div>
         </div>
         <div class="row__third-column">
-            <div class="row__scroll" :style="`left:${rowScroll}px`">
+            <div ref="row"
+                 class="row__scroll"
+                 :style="`left:${rowScroll}px`"
+                 @wheel.prevent="scrollMouse">
                 <bookmaker v-for="(maker, index) in odds.bookmakers"
                            :key="index"
                            :maker="maker"
@@ -62,7 +65,13 @@
             consensus() {
                 return store.getters.cons(this.type)
             }
+        },
+        methods:{
+            scrollMouse(e){
+                e.wheelDelta > 0 ? store.commit('scroll', 'left') : store.commit('scroll', 'right')
+            }
         }
+
 
     }
 </script>
